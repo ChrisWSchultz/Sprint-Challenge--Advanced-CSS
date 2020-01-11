@@ -1,1 +1,17 @@
 // Mixins Here
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center() {
+  display: flex;
+  justify-content: center;
+}
+
+.buttonify(@bg-c, @c, @p, @b-r) {
+  background-color: @bg-c;
+  color: @c;
+  padding: @p;
+  border-radius: @b-r;
+}

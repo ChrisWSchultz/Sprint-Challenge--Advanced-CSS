@@ -11,6 +11,11 @@
     p {
       padding:0 15px;
     }
+
+    img {
+      width: 100%;
+      border-radius: 5px;
+    }
   
   }
 
@@ -24,6 +29,17 @@
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+    }
+
+    @media @phone {
+      img {
+        width: 100%;
+      }
+
+      .sky, .launch {
+        display: none;
+      }
+
     }
   }
 
@@ -46,8 +62,18 @@
     display: flex;
     justify-content: center;
 
+    @media @phone {
+      flex-direction: column-reverse;
+      margin: 20px 2.5%;
+      padding: 20px 0;
+    }
+
     .walk-text {
       width: 50%;
+
+      @media @phone {
+        width: 100%;
+      }
 
       h3 {
         margin-bottom: 10px;
@@ -58,12 +84,32 @@
       }
 
       .btn {
+        display: inline-block;
+        font-size: 1.8rem;
+        text-align: center;
+        .buttonify(@btn-bg-color, @wild-sand, 3% 5%, 5px);
+
+        @media @phone {
+          width: 100%;
+          padding: 4.5%;
+        }
+
+        &:hover {
+          background-color: #E67300;
+          color: #4212B3;
+        }
       }
     }
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
+
+      @media @phone {
+        width: 100%;
+        margin: 0;
+        margin-bottom: 20px;
+      }
       
       img {
         width: 100%;
